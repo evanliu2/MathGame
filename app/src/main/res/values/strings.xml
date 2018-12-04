@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">MathThing</string>
+    <string name="main_row1_col1">Button</string>
+    <string name="main_row1_col2">Button</string>
+    <string name="main_row1_col3">Button</string>
+    <string name="main_row1_col4">Button</string>
+    <string name="main_row2_col1">Button</string>
+    <string name="main_row2_col2">Button</string>
+    <string name="main_row2_col3">Button</string>
+    <string name="main_row2_col4">Button</string>
+    <string name="main_row3_col1">Button</string>
+    <string name="main_row3_col2">Button</string>
+    <string name="main_row3_col3">Button</string>
+    <string name="main_row3_col4">Button</string>
+    <string name="main_addition">+</string>
+    <string name="main_subtraction">-</string>
+    <string name="main_multiplication">X</string>
+    <string name="main_division">÷</string>
+    <string name="main_reset">Button</string>
+    <string name="main_score">Score</string>
 </resources>
