@@ -1,17 +1,17 @@
 package com.example.maththing;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Integer> numbers, luckyNumbers, operations; // 1 -> +, 2 -> -, 3 -> *, 4 -> /
-    private Button N1, N2, N3, N4, N5, N6, N7, N8, N9, N10, N11, N12, reset, add, subt, mult, div;
+    private Button row1col1, row1col2, row1col3, row1col4, row2col1, row2col2, row2col3, row2col4, row3col1, row3col2, row3col3, row3col4, reset, add, subt, mult, div;
     private int target;
     private Boolean redo = true;
     private TextView targetNum;
@@ -44,40 +44,44 @@ public class MainActivity extends AppCompatActivity {
             operations.add((int)(Math.random()*operationNum + 1));
         }
 
-        N1.setText("" + numbers.get(0));
-        N2.setText("" + numbers.get(1));
-        N3.setText("" + numbers.get(2));
-        N4.setText("" + numbers.get(3));
-        N5.setText("" + numbers.get(4));
-        N6.setText("" + numbers.get(5));
-        N7.setText("" + numbers.get(6));
-        N8.setText("" + numbers.get(7));
-        N9.setText("" + numbers.get(8));
-        N10.setText("" + numbers.get(9));
-        N11.setText("" + numbers.get(10));
-        N12.setText("" + numbers.get(11));
+        row1col1.setText("" + numbers.get(0));
+        row1col2.setText("" + numbers.get(1));
+        row1col3.setText("" + numbers.get(2));
+        row1col4.setText("" + numbers.get(3));
+        row2col1.setText("" + numbers.get(4));
+        row2col2.setText("" + numbers.get(5));
+        row2col3.setText("" + numbers.get(6));
+        row2col4.setText("" + numbers.get(7));
+        row3col1.setText("" + numbers.get(8));
+        row3col2.setText("" + numbers.get(9));
+        row3col3.setText("" + numbers.get(10));
+        row3col4.setText("" + numbers.get(11));
 
     }
 
     private void wireWidgets() {
-        N1 = findViewById(R.id.button_main_num1);
-        N2 = findViewById(R.id.button_main_num2);
-        N3 = findViewById(R.id.button_main_num3);
-        N4 = findViewById(R.id.button_main_num4);
-        N5 = findViewById(R.id.button_main_num5);
-        N6 = findViewById(R.id.button_main_num6);
-        N7 = findViewById(R.id.button_main_num7);
-        N8 = findViewById(R.id.button_main_num8);
-        N9 = findViewById(R.id.button_main_num9);
-        N10 = findViewById(R.id.button_main_num10);
-        N11 = findViewById(R.id.button_main_num11);
-        N12 = findViewById(R.id.button_main_num12);
+
+        row1col1 = findViewById(R.id.button_main_row1_col1);
+        row1col2 = findViewById(R.id.button_main_row1_col2);
+        row1col3 = findViewById(R.id.button_main_row1_col3);
+        row1col4 = findViewById(R.id.button_main_row1_col4);
+        row2col1 = findViewById(R.id.button_main_row2_col1);
+        row2col2 = findViewById(R.id.button_main_row2_col2);
+        row2col3 = findViewById(R.id.button_main_row2_col3);
+        row2col4 = findViewById(R.id.button_main_row2_col4);
+        row3col1 = findViewById(R.id.button_main_row3_col1);
+        row3col2 = findViewById(R.id.button_main_row3_col2);
+        row3col3 = findViewById(R.id.button_main_row3_col3);
+        row3col4 = findViewById(R.id.button_main_row3_col4);
         reset = findViewById(R.id.button_main_reset);
         add = findViewById(R.id.button_main_add);
         subt = findViewById(R.id.button_main_subt);
         mult = findViewById(R.id.button_main_mult);
         div = findViewById(R.id.button_main_div);
         targetNum = findViewById(R.id.textView_main_targetNum);
+
+
     }
+
 
 }
