@@ -74,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
         row3col3 = findViewById(R.id.button_main_row3_col3);
         row3col4 = findViewById(R.id.button_main_row3_col4);
         reset = findViewById(R.id.button_main_reset);
-        add = findViewById(R.id.button_main_add);
-        subt = findViewById(R.id.button_main_subt);
-        mult = findViewById(R.id.button_main_mult);
-        div = findViewById(R.id.button_main_div);
+        add = findViewById(R.id.button_main_addition);
+        subt = findViewById(R.id.button_main_subtraction);
+        mult = findViewById(R.id.button_main_multiplication);
+        div = findViewById(R.id.button_main_division);
         targetNum = findViewById(R.id.textView_main_targetNum);
 
 
