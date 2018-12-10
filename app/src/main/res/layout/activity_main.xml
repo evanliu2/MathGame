@@ -242,9 +242,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintVertical_bias="0.089" />
 
     <TextView
         android:id="@+id/textView_main_userinput"
@@ -260,7 +261,7 @@
         android:text="@string/main_userInput"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="@android:dimen/notification_large_icon_width"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
