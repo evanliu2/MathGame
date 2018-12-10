@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> numbers, luckyNumbers, operations; // 1 -> +, 2 -> -, 3 -> *, 4 -> /
     private Button row1col1, row1col2, row1col3, row1col4, row2col1, row2col2, row2col3, row2col4, row3col1, row3col2, row3col3, row3col4, reset, add, subt, mult, div;
     private int target;
-    private Boolean redo = false;
     private TextView targetNum;
 
     // modify based on level difficulties
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         }
         target = luckyNumbers.get(0);
 
-        redo = false;
         for (int i = 1; i <= operationNum; i++) {
             int backUp = target;
             target = calculate(target, luckyNumbers.get(i), operations.get(i - 1));
@@ -80,8 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         targetNum.setText("" + target);
-
-
     }
 
     private int calculate(int num1, int num2, int operation) {
