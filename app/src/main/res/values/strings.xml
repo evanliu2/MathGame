@@ -17,7 +17,7 @@
     <string name="main_multiplication">X</string>
     <string name="main_division">÷</string>
     <string name="main_reset">Button</string>
-    <string name="main_score">Score</string>
+    <string name="main_score">Timer</string>
     <string name="main_targetNum">47</string>
     <string name="main_userInput">UserInput</string>
     <string name="main_redo">Reset</string>

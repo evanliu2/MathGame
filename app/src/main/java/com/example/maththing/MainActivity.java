@@ -1,6 +1,7 @@
 package com.example.maththing;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,7 +16,25 @@ public class MainActivity extends AppCompatActivity {
     private int target;
     private TextView targetNum;
 
-    // modify based on level difficulties
+    // Timer
+    private TextView timer;
+    private long startTime = 0;
+    Handler timerHandler = new Handler();
+    Runnable timerRunnable = new Runnable() {
+        @Override
+        public void run() {
+            long millis = System.currentTimeMillis() - startTime;
+            int seconds = (int) (millis / 1000);
+            int minutes = seconds / 60;
+            seconds = seconds % 60;
+
+            timer.setText(String.format("%d:%02d", minutes, seconds));
+
+            timerHandler.postDelayed(this, 500);
+        }
+    };
+
+    // Modify based on level difficulties
     private int operationNum = 4;
     private int range = 10;
     private int specialNum = (int)(Math.pow(range*1.0, operationNum*1.0)+1);
@@ -27,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         wireWidgets();
         createComponents();
+        startTime = System.currentTimeMillis();
+        timerHandler.postDelayed(timerRunnable, 0);
 
     }
 
@@ -121,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         mult = findViewById(R.id.button_main_multiplication);
         div = findViewById(R.id.button_main_division);
         targetNum = findViewById(R.id.textView_main_targetNum);
-
+        timer = findViewById(R.id.textView_main_timer);
 
     }
 

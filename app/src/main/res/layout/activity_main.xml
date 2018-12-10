@@ -212,10 +212,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="82dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="4dp"
+        android:id="@+id/textView_main_timer"
+        android:layout_width="104dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="88dp"
         android:text="@string/main_score"
         android:textAlignment="center"
