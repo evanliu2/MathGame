@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     // modify based on level difficulties
     private int operationNum = 4;
     private int range = 10;
+    private int specialNum = (int)(Math.pow(range*1.0, operationNum*1.0)+1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,33 +56,28 @@ public class MainActivity extends AppCompatActivity {
         row3col3.setText("" + numbers.get(10));
         row3col4.setText("" + numbers.get(11));
 
-        do {
-            redo = false;
-            ArrayList<Integer> selector = new ArrayList<>();
-            for (int i = 0; i < 12; i++) {
-                selector.add(i); // selector: 0 -> 11
+        ArrayList<Integer> selector = new ArrayList<>();
+        for (int i = 0; i < 12; i++) {
+            selector.add(i); // selector: 0 -> 11
+        }
+        for (int i = 1; i <= operationNum + 1; i++) {
+            int index = (int) (Math.random() * (selector.size() - 1));
+            luckyNumbers.add(numbers.get(index));
+            selector.remove(index);
+        }
+        target = luckyNumbers.get(0);
+
+        redo = false;
+        for (int i = 1; i <= operationNum; i++) {
+            int backUp = target;
+            target = calculate(target, luckyNumbers.get(i), operations.get(i - 1));
+            if (target == specialNum) {
+                target = backUp;
+                operations.set(i-1, (int)(Math.random()*operationNum + 1));
+                i--;
             }
-            for (int i = 1; i <= operationNum + 1; i++) {
-                int index = (int) (Math.random() * (selector.size() - 1));
-                luckyNumbers.add(numbers.get(index));
-                selector.remove(index);
-            }
-            target = luckyNumbers.get(0);
-            // not work
-            for (int i = 1; i <= operationNum; i++) {
-                target = calculate(target, luckyNumbers.get(i), operations.get(i - 1));
-                if (target == Integer.MAX_VALUE) {
-                    i = operationNum+1;
-                    redo = true;
-                }
-            }
-//            if (redo == false) {
-//                target = calculate(target, luckyNumbers.get(luckyNumbers.size() - 1), operations.get(operations.size() - 1));
-//                if (target == Integer.MAX_VALUE) {
-//                    redo = true;
-//                }
-//            }
-        } while(redo == true);
+        }
+
 
         targetNum.setText("" + target);
 
@@ -92,33 +88,21 @@ public class MainActivity extends AppCompatActivity {
         if (operation == 1) {
             return num1 + num2;
         } else if (operation == 2) {
-            return num1 - num2;
+            if (num1 - num2 >= 0) {
+                return num1 - num2;
+            } else {
+                return specialNum;
+            }
         } else if (operation == 3) {
             return num1 * num2;
         } else if (operation == 4) {
             if (num1 >= num2 && num1%num2 == 0) {
                 return num1/num2;
             } else {
-                return Integer.MAX_VALUE;
+                return specialNum;
             }
         }
-        return Integer.MAX_VALUE;
-    }
-
-    private void getTarget() {
-        target = luckyNumbers.get(0);
-//        redo = false;
-//        for (int i = 1; i <= operationNum; i++) {
-//            target = calculate(target, luckyNumbers.get(i), operations.get(i-1));
-//            if (target == Integer.MAX_VALUE) {
-//                redo = true;
-//                i = operationNum + 1;
-//            }
-//        }
-//        target = calculate(target, luckyNumbers.get(luckyNumbers.size()-1), operations.get(operations.size()-1));
-//        if (target == Integer.MAX_VALUE) {
-//            redo = true;
-//        }
+        return specialNum;
     }
 
     private void wireWidgets() {
