@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private TextView name;
+    TextView name;
     private Button playButton;
 
     @Override
