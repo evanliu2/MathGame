@@ -13,7 +13,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="Mathalon"
+        android:text="MathMax"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="70dp"
