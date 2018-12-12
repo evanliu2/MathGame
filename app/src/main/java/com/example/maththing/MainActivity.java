@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
     // Timer
     private TextView timer;
     private long startTime = 0;
@@ -62,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
     private int range = 10;
     private int specialNum = (int)(Math.pow(range*1.0, operationNum*1.0)+1);
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +81,39 @@ public class MainActivity extends AppCompatActivity {
         createComponents();
         startTime = System.currentTimeMillis();
         timerHandler.postDelayed(timerRunnable, 0);
+
+
+
+        Animation LtoR = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        Animation RtoL = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+        Animation ZoomIn = AnimationUtils.loadAnimation(this, R.anim.zoomin);
+        Animation Down = AnimationUtils.loadAnimation(this, R.anim.uptodown);
+
+        userInput.startAnimation(ZoomIn);
+        row1col1.startAnimation(LtoR);
+        row1col2.startAnimation(LtoR);
+        row2col1.startAnimation(LtoR);
+        row2col2.startAnimation(LtoR);
+        row3col1.startAnimation(LtoR);
+        row3col2.startAnimation(LtoR);
+        add.startAnimation(LtoR);
+        subt.startAnimation(LtoR);
+
+        timer.startAnimation(LtoR);
+
+        row1col3.startAnimation(RtoL);
+        row1col4.startAnimation(RtoL);
+        row2col3.startAnimation(RtoL);
+        row2col4.startAnimation(RtoL);
+        row3col3.startAnimation(RtoL);
+        row3col4.startAnimation(RtoL);
+        mult.startAnimation(RtoL);
+        div.startAnimation(RtoL);
+
+        reset.startAnimation(RtoL);
+
+        targetNum.startAnimation(Down);
+
 
         row1col1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -529,7 +572,12 @@ public class MainActivity extends AppCompatActivity {
         timer = findViewById(R.id.textView_main_timer);
         userInput = findViewById(R.id.textView_main_userinput);
 
+
+
     }
+
+
+
 
     }
 

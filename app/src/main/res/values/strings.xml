@@ -14,7 +14,7 @@
     <string name="main_row3_col4">Button</string>
     <string name="main_addition">+</string>
     <string name="main_subtraction">-</string>
-    <string name="main_multiplication">X</string>
+    <string name="main_multiplication">×</string>
     <string name="main_division">÷</string>
     <string name="main_reset">Button</string>
     <string name="main_score">Timer</string>
