@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private int randNumRow3Col2;
     private int randNumRow3Col3;
     private int randNumRow3Col4;
+    private int operationCounter;
 
 
 
@@ -121,16 +122,16 @@ public class MainActivity extends AppCompatActivity {
                if(numClicked1 == false)
                {
                    num1 = randNumRow1Col1;
+                   userInput.setText(userInput.getText() + " " + row1col1.getText());
                    numClicked1 = true;
                }
 
                else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                {
                    num2 = randNumRow1Col1;
-                   userInput.setText(calculate(num1, num2, operation));
-                   num1 = 0;
+                   userInput.setText(calculate(num1, num2, operation) + "");
                    num2 = 0;
-                   numClicked1 = false;
+                   numClicked1 = true;
                    numClicked2 = false;
                }
 
@@ -144,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow1Col2;
+                    userInput.setText(userInput.getText() + " " + row1col2.getText());
                     numClicked1 = true;
                 }
 
@@ -151,9 +153,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow1Col2;
                     userInput.setText(calculate(num1, num2, operation) + "");
-                    num1 = 0;
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -167,16 +168,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow1Col3;
+                    userInput.setText(userInput.getText() + " " + row1col3.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow1Col3;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -190,16 +191,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow1Col4;
+                    userInput.setText(userInput.getText() + " " + row1col4.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow1Col4;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -213,16 +214,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow2Col1;
+                    userInput.setText(userInput.getText() + " " + row2col1.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow2Col1;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -236,16 +237,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow2Col2;
+                    userInput.setText(userInput.getText() + " " + row2col2.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow2Col2;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -259,16 +260,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow2Col3;
+                    userInput.setText(userInput.getText() + " " + row2col3.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow2Col3;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -282,16 +283,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow2Col4;
+                    userInput.setText(userInput.getText() + " " + row2col4.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow2Col4;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -305,16 +306,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow3Col1;
+                    userInput.setText(userInput.getText() + " " + row3col1.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow3Col1;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -328,16 +329,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow3Col2;
+                    userInput.setText(userInput.getText() + " " + row3col2.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow3Col2;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -351,16 +352,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow3Col3;
+                    userInput.setText(userInput.getText() + " " + row3col3.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow3Col3;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -374,16 +375,16 @@ public class MainActivity extends AppCompatActivity {
                 if(numClicked1 == false)
                 {
                     num1 = randNumRow3Col4;
+                    userInput.setText(userInput.getText() + " " + row3col4.getText());
                     numClicked1 = true;
                 }
 
                 else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
                 {
                     num2 = randNumRow3Col4;
-                    userInput.setText(calculate(num1, num2, operation));
-                    num1 = 0;
+                    userInput.setText(calculate(num1, num2, operation) + "");
                     num2 = 0;
-                    numClicked1 = false;
+                    numClicked1 = true;
                     numClicked2 = false;
                 }
 
@@ -394,10 +395,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (numClicked1 == true && operationClicked == false && numClicked2 == false)
+                if (numClicked1 == true && numClicked2 == false)
                 {
                     operation = 1;
                     operationClicked = true;
+                    userInput.setText(userInput.getText() + " " + getString(R.string.main_addition));
+                    operationCounter++;
                 }
             }
         });
@@ -406,10 +409,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (numClicked1 == true && operationClicked == false && numClicked2 == false)
+                if (numClicked1 == true && numClicked2 == false)
                 {
                     operation = 2;
                     operationClicked = true;
+                    userInput.setText(userInput.getText() + " " + getString(R.string.main_subtraction));
+                    operationCounter++;
                 }
             }
         });
@@ -418,10 +423,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (numClicked1 == true && operationClicked == false && numClicked2 == false)
+                if (numClicked1 == true && numClicked2 == false)
                 {
                     operation = 3;
                     operationClicked = true;
+                    userInput.setText(userInput.getText() + " " + getString(R.string.main_multiplication));
+                    operationCounter++;
                 }
 
             }
@@ -431,10 +438,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (numClicked1 == true && operationClicked == false && numClicked2 == false)
+                if (numClicked1 == true && numClicked2 == false)
                 {
                     operation = 4;
                     operationClicked = true;
+                    userInput.setText(userInput.getText() + " " + getString(R.string.main_division));
+                    operationCounter++;
                 }
 
             }
