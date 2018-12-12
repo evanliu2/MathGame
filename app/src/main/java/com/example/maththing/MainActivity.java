@@ -40,11 +40,6 @@ public class MainActivity extends AppCompatActivity {
     private int operationCounter;
 
 
-
-
-
-
-
     // Timer
     private TextView timer;
     private long startTime = 0;
@@ -130,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                {
                    num2 = randNumRow1Col1;
                    userInput.setText(calculate(num1, num2, operation) + "");
+                   num1 = calculate(num1,num2,operation);
                    num2 = 0;
                    numClicked1 = true;
                    numClicked2 = false;
@@ -153,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow1Col2;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -176,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow1Col3;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -199,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow1Col4;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -222,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow2Col1;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -238,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num1 = randNumRow2Col2;
                     userInput.setText(userInput.getText() + " " + row2col2.getText());
+                    num1 = calculate(num1,num2,operation);
                     numClicked1 = true;
                 }
 
@@ -245,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow2Col2;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -268,6 +270,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow2Col3;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -291,6 +294,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow2Col4;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -314,6 +318,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow3Col1;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -337,6 +342,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow3Col2;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -360,6 +366,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow3Col3;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -383,6 +390,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     num2 = randNumRow3Col4;
                     userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
