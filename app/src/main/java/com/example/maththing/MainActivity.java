@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
     private int randNumRow3Col3;
     private int randNumRow3Col4;
     private int operationCounter;
-
+    public static final String EXTRA_MESSAGE = "time";
 
     // Timer
     private TextView timer;
-    private long startTime = 0;
+    public long startTime = 0;
     Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
         @Override
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -247,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -319,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -343,7 +343,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -367,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
                     numClicked1 = true;
                     numClicked2 = false;
                 }
-
+                checkFinish();
             }
         });
 
@@ -543,6 +543,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         targetNum.setText("" + target);
+    }
+
+    private void checkFinish() {
+        if (num1 == target && operationCounter == operationNum) {
+            Intent gameFinished = new Intent(MainActivity.this, FinishedActivity.class);
+            String time = startTime + "";
+            gameFinished.putExtra(EXTRA_MESSAGE, time);
+            startActivity(gameFinished);
+        }
     }
 
     private int calculate(int num1, int num2, int operation) {
