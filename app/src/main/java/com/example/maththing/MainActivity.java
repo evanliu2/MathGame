@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> numbers, luckyNumbers, operations; // 1 -> +, 2 -> -, 3 -> *, 4 -> /
     private Button row1col1, row1col2, row1col3, row1col4, row2col1, row2col2, row2col3, row2col4, row3col1, row3col2, row3col3, row3col4, reset, add, subt, mult, div;
     private int target;
-    private TextView targetNum, userInput;
+    private TextView targetNum, userInput, operationDisplay;
     private Boolean numClicked1 = false;
     private Boolean numClicked2 = false;
     private Boolean operationClicked = false;
@@ -61,10 +61,7 @@ public class MainActivity extends AppCompatActivity {
     // Modify based on level difficulties
     private int operationNum = 4;
     private int range = 10;
-    private int specialNum = (int)(Math.pow(range*1.0, operationNum*1.0)+1);
-
-
-
+    private int specialNum = -1;
 
 
     @Override
@@ -127,6 +124,13 @@ public class MainActivity extends AppCompatActivity {
                    num2 = randNumRow1Col1;
                    userInput.setText(calculate(num1, num2, operation) + "");
                    num1 = calculate(num1,num2,operation);
+                   if(num1 == specialNum)
+
+                   {
+
+                       Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                   }
                    num2 = 0;
                    numClicked1 = true;
                    numClicked2 = false;
@@ -151,6 +155,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow1Col2;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -175,6 +186,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow1Col3;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -199,6 +217,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow1Col4;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -223,6 +248,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow2Col1;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -248,6 +280,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow2Col2;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -272,6 +311,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow2Col3;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -296,6 +342,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow2Col4;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -320,6 +373,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow3Col1;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -344,6 +404,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow3Col2;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -368,6 +435,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow3Col3;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -392,6 +466,13 @@ public class MainActivity extends AppCompatActivity {
                     num2 = randNumRow3Col4;
                     userInput.setText(calculate(num1, num2, operation) + "");
                     num1 = calculate(num1,num2,operation);
+                    if(num1 == specialNum)
+
+                    {
+
+                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
+
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -410,6 +491,8 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_addition));
                     operationCounter++;
+                    operationDisplay.setText("Operations Used:" + operationCounter);
+
                 }
             }
         });
@@ -424,6 +507,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_subtraction));
                     operationCounter++;
+                    operationDisplay.setText("Operations Used:" + operationCounter);
                 }
             }
         });
@@ -438,6 +522,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_multiplication));
                     operationCounter++;
+                    operationDisplay.setText("Operations Used:" + operationCounter);
                 }
 
             }
@@ -453,6 +538,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_division));
                     operationCounter++;
+                    operationDisplay.setText("Operations Used:" + operationCounter);
                 }
 
             }
@@ -465,10 +551,13 @@ public class MainActivity extends AppCompatActivity {
                 userInput.setText("");
                 num1 = 0;
                 num2 = 0;
+                operationCounter = 0;
+                operationDisplay.setText("Operations Used: 0");
                 operation = 4;
                 numClicked1 = false;
                 numClicked2 = false;
                 operationClicked = false;
+
 
             }
         });
@@ -580,8 +669,7 @@ public class MainActivity extends AppCompatActivity {
         targetNum = findViewById(R.id.textView_main_targetNum);
         timer = findViewById(R.id.textView_main_timer);
         userInput = findViewById(R.id.textView_main_userinput);
-
-
+        operationDisplay = findViewById(R.id.textView_main_operation_counter);
 
     }
 
