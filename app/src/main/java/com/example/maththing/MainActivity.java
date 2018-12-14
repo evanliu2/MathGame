@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         Animation RtoL = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
         Animation ZoomIn = AnimationUtils.loadAnimation(this, R.anim.zoomin);
         Animation Down = AnimationUtils.loadAnimation(this, R.anim.uptodown);
+        Animation Bounce = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
         userInput.startAnimation(ZoomIn);
         row1col1.startAnimation(LtoR);
