@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> numbers, luckyNumbers, operations; // 1 -> +, 2 -> -, 3 -> *, 4 -> /
     private Button row1col1, row1col2, row1col3, row1col4, row2col1, row2col2, row2col3, row2col4, row3col1, row3col2, row3col3, row3col4, reset, add, subt, mult, div;
     private int target;
-    private TextView targetNum, userInput;
+    private TextView targetNum, userInput, operationCounterPro;
     private Boolean numClicked1 = false;
     private Boolean numClicked2 = false;
     private Boolean operationClicked = false;
@@ -64,9 +64,6 @@ public class MainActivity extends AppCompatActivity {
     private int specialNum = (int)(Math.pow(range*1.0, operationNum*1.0)+1);
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,60 +74,34 @@ public class MainActivity extends AppCompatActivity {
         startTime = System.currentTimeMillis();
         timerHandler.postDelayed(timerRunnable, 0);
 
+        animation();
+        setButtonsAndDisplay();
 
 
-        Animation LtoR = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
-        Animation RtoL = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
-        Animation ZoomIn = AnimationUtils.loadAnimation(this, R.anim.zoomin);
-        Animation Down = AnimationUtils.loadAnimation(this, R.anim.uptodown);
-        Animation Bounce = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
-        userInput.startAnimation(ZoomIn);
-        row1col1.startAnimation(LtoR);
-        row1col2.startAnimation(LtoR);
-        row2col1.startAnimation(LtoR);
-        row2col2.startAnimation(LtoR);
-        row3col1.startAnimation(LtoR);
-        row3col2.startAnimation(LtoR);
-        add.startAnimation(LtoR);
-        subt.startAnimation(LtoR);
+    }
 
-        timer.startAnimation(LtoR);
-
-        row1col3.startAnimation(RtoL);
-        row1col4.startAnimation(RtoL);
-        row2col3.startAnimation(RtoL);
-        row2col4.startAnimation(RtoL);
-        row3col3.startAnimation(RtoL);
-        row3col4.startAnimation(RtoL);
-        mult.startAnimation(RtoL);
-        div.startAnimation(RtoL);
-
-        reset.startAnimation(RtoL);
-
-        targetNum.startAnimation(Down);
-
-
+    private void setButtonsAndDisplay() {
         row1col1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-               if(numClicked1 == false)
-               {
-                   num1 = randNumRow1Col1;
-                   userInput.setText(userInput.getText() + " " + row1col1.getText());
-                   numClicked1 = true;
-               }
+                if(numClicked1 == false)
+                {
+                    num1 = randNumRow1Col1;
+                    userInput.setText(userInput.getText() + " " + row1col1.getText());
+                    numClicked1 = true;
+                }
 
-               else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
-               {
-                   num2 = randNumRow1Col1;
-                   userInput.setText(calculate(num1, num2, operation) + "");
-                   num1 = calculate(num1,num2,operation);
-                   num2 = 0;
-                   numClicked1 = true;
-                   numClicked2 = false;
-               }
+                else if(numClicked1 == true && operationClicked == true && numClicked2 == false)
+                {
+                    num2 = randNumRow1Col1;
+                    userInput.setText(calculate(num1, num2, operation) + "");
+                    num1 = calculate(num1,num2,operation);
+                    num2 = 0;
+                    numClicked1 = true;
+                    numClicked2 = false;
+                }
 
             }
         });
@@ -410,6 +381,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_addition));
                     operationCounter++;
+                    operationCounterPro.setText("Operation left:" + (4-operationCounter));
                 }
             }
         });
@@ -424,6 +396,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_subtraction));
                     operationCounter++;
+                    operationCounterPro.setText("Operation left:" + (4-operationCounter));
                 }
             }
         });
@@ -438,6 +411,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_multiplication));
                     operationCounter++;
+                    operationCounterPro.setText("Operation left:" + (4-operationCounter));
                 }
 
             }
@@ -453,6 +427,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_division));
                     operationCounter++;
+                    operationCounterPro.setText("Operation left:" + (4-operationCounter));
                 }
 
             }
@@ -472,6 +447,39 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void animation() {
+        Animation LtoR = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
+        Animation RtoL = AnimationUtils.loadAnimation(this, R.anim.righttoleft);
+        Animation ZoomIn = AnimationUtils.loadAnimation(this, R.anim.zoomin);
+        Animation Down = AnimationUtils.loadAnimation(this, R.anim.uptodown);
+        Animation Bounce = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        userInput.startAnimation(ZoomIn);
+        row1col1.startAnimation(LtoR);
+        row1col2.startAnimation(LtoR);
+        row2col1.startAnimation(LtoR);
+        row2col2.startAnimation(LtoR);
+        row3col1.startAnimation(LtoR);
+        row3col2.startAnimation(LtoR);
+        add.startAnimation(LtoR);
+        subt.startAnimation(LtoR);
+
+        timer.startAnimation(LtoR);
+
+        row1col3.startAnimation(RtoL);
+        row1col4.startAnimation(RtoL);
+        row2col3.startAnimation(RtoL);
+        row2col4.startAnimation(RtoL);
+        row3col3.startAnimation(RtoL);
+        row3col4.startAnimation(RtoL);
+        mult.startAnimation(RtoL);
+        div.startAnimation(RtoL);
+
+        reset.startAnimation(RtoL);
+
+        targetNum.startAnimation(Down);
     }
 
     private void createComponents() {
@@ -580,7 +588,7 @@ public class MainActivity extends AppCompatActivity {
         targetNum = findViewById(R.id.textView_main_targetNum);
         timer = findViewById(R.id.textView_main_timer);
         userInput = findViewById(R.id.textView_main_userinput);
-
+        operationCounterPro = findViewById(R.id.textView_main_operationCounter);
 
 
     }
