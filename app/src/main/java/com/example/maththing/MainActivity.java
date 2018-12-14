@@ -105,6 +105,12 @@ public class MainActivity extends AppCompatActivity {
                        Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
                    }
+                   if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                   {
+                       Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                       finish.putExtra("Finish", "Congratulations!");
+                       startActivity(finish);
+                   }
                    num2 = 0;
                    numClicked1 = true;
                    numClicked2 = false;
@@ -135,6 +141,12 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
+                    }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
                     }
                     num2 = 0;
                     numClicked1 = true;
@@ -167,6 +179,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
                     }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -198,6 +216,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
                     }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -228,6 +252,12 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
+                    }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
                     }
                     num2 = 0;
                     numClicked1 = true;
@@ -261,6 +291,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
                     }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -291,6 +327,12 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
+                    }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
                     }
                     num2 = 0;
                     numClicked1 = true;
@@ -323,6 +365,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
                     }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -353,6 +401,12 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
+                    }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
                     }
                     num2 = 0;
                     numClicked1 = true;
@@ -385,6 +439,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
                     }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -416,6 +476,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
                     }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
+                    }
                     num2 = 0;
                     numClicked1 = true;
                     numClicked2 = false;
@@ -446,6 +512,12 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(MainActivity.this, "Invalid Input, Please Reset", Toast.LENGTH_SHORT).show();
 
+                    }
+                    if(num1 == Integer.parseInt(targetNum.getText().toString()))
+                    {
+                        Intent finish = new Intent(MainActivity.this, FinishedActivity.class);
+                        finish.putExtra("Finish", "Congratulations!");
+                        startActivity(finish);
                     }
                     num2 = 0;
                     numClicked1 = true;

@@ -216,12 +216,14 @@
         android:id="@+id/textView_main_timer"
         android:layout_width="104dp"
         android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="76dp"
         android:text="@string/main_score"
         android:textAlignment="center"
         android:textColor="#fdfaf0"
         android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_main_targetNum"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
