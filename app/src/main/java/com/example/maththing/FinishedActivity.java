@@ -12,7 +12,8 @@ public class FinishedActivity extends AppCompatActivity {
 
     private Button menu;
     private Button replay;
-    private TextView timerDisplay;
+    private Long finalTime;
+    private TextView displayTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +22,15 @@ public class FinishedActivity extends AppCompatActivity {
 
         wireWidgets();
         Intent receive = getIntent();
-        String time = receive.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        Long time1 = Long.parseLong(time);
-        long millis = System.currentTimeMillis() - time1;
+        String receiveTime = receive.getStringExtra("Finish");
+        finalTime = Long.parseLong(receiveTime);
+
+        long millis = System.currentTimeMillis() - finalTime;
         int seconds = (int) (millis / 1000);
         int minutes = seconds / 60;
         seconds = seconds % 60;
 
-        timerDisplay.setText("Time Used: " + String.format("%d:%02d", minutes, seconds));
-
+        displayTime.setText("Time Used: " + String.format("%d:%02d", minutes, seconds));
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +53,6 @@ public class FinishedActivity extends AppCompatActivity {
     private void wireWidgets() {
         menu = findViewById(R.id.button_finished_menu);
         replay = findViewById(R.id.button_finished_replay);
-        timerDisplay = findViewById(R.id.textView_finished_displayTime);
+        displayTime = findViewById(R.id.textView_main_time);
     }
 }
