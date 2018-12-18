@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     public String time;
 
 
+
+
     // Timer
     private TextView timer;
     private long startTime = 0;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     private int specialNum = -1;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         row1col1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 if(numClicked1 == false)
                 {
