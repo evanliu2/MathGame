@@ -21,6 +21,6 @@
     <string name="main_targetNum">47</string>
     <string name="main_userInput"></string>
     <string name="main_redo">Reset</string>
-    <string name="main_operation_counter">Operations Used:</string>
+    <string name="main_operation_counter">Operations Used: 0 / 4</string>
     <string name="main_time"></string>
 </resources>

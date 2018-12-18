@@ -244,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = 0;
                 num2 = 0;
                 operationCounter = 0;
-                operationDisplay.setText("Operations Used: 0");
+                operationDisplay.setText("Operations Used: 0 / 4");
                 operation = 4;
                 numClicked1 = false;
                 numClicked2 = false;
@@ -401,8 +401,7 @@ public class MainActivity extends AppCompatActivity {
         butter.setVisibility(View.INVISIBLE);
     }
 
-    private void enableButtons()
-    {
+    private void enableButtons() {
         row1col1.setVisibility(View.VISIBLE);
         row1col2.setVisibility(View.VISIBLE);
         row1col3.setVisibility(View.VISIBLE);
