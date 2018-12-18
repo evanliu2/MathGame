@@ -638,6 +638,8 @@ public class MainActivity extends AppCompatActivity {
         reset.startAnimation(RtoL);
 
         targetNum.startAnimation(Down);
+
+        operationDisplay.startAnimation(ZoomIn);
     }
 
     private void createComponents() {
