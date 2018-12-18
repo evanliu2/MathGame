@@ -289,16 +289,17 @@
 
     <TextView
         android:id="@+id/textView_main_operation_counter"
-        android:layout_width="348dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="386dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="172dp"
         android:text="@string/main_operation_counter"
         android:textColor="@android:color/background_light"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:typeface="monospace"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

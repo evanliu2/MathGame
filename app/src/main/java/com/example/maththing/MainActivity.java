@@ -530,7 +530,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_addition));
                     operationCounter++;
-                    operationDisplay.setText("Operations Used:" + operationCounter);
+                    operationDisplay.setText("Operations Used:" + operationCounter + " / " + operationNum);
                     checkFinished();
 
                 }
@@ -547,7 +547,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_subtraction));
                     operationCounter++;
-                    operationDisplay.setText("Operations Used:" + operationCounter);
+                    operationDisplay.setText("Operations Used:" + operationCounter + " / " + operationNum);
                     checkFinished();
                 }
             }
@@ -563,7 +563,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_multiplication));
                     operationCounter++;
-                    operationDisplay.setText("Operations Used:" + operationCounter);
+                    operationDisplay.setText("Operations Used:" + operationCounter + " / " + operationNum);
                     checkFinished();
                 }
 
@@ -580,7 +580,7 @@ public class MainActivity extends AppCompatActivity {
                     operationClicked = true;
                     userInput.setText(userInput.getText() + " " + getString(R.string.main_division));
                     operationCounter++;
-                    operationDisplay.setText("Operations Used:" + operationCounter);
+                    operationDisplay.setText("Operations Used:" + operationCounter + " / " + operationNum);
                     checkFinished();
                 }
 
@@ -595,7 +595,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = 0;
                 num2 = 0;
                 operationCounter = 0;
-                operationDisplay.setText("Operations Used: 0");
+                operationDisplay.setText("Operations Used: 0 / 4");
                 operation = 4;
                 numClicked1 = false;
                 numClicked2 = false;
@@ -707,8 +707,7 @@ public class MainActivity extends AppCompatActivity {
         butter.setVisibility(View.INVISIBLE);
     }
 
-    private void enableButtons()
-    {
+    private void enableButtons() {
         row1col1.setVisibility(View.VISIBLE);
         row1col2.setVisibility(View.VISIBLE);
         row1col3.setVisibility(View.VISIBLE);
