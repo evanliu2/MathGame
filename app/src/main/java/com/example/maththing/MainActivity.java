@@ -1,7 +1,9 @@
 package com.example.maththing;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -360,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
         if(numClicked1 == false)
         {
             num1 = Integer.parseInt(button.getText().toString());
-            userInput.setText(userInput.getText() + " " + row1col1.getText());
+            userInput.setText(userInput.getText() + " " + button.getText());
             numClicked1 = true;
             disableButton(button);
         }
@@ -391,7 +393,7 @@ public class MainActivity extends AppCompatActivity {
             operationClicked = true;
             userInput.setText(userInput.getText() + " " + sign);
             operationCounter++;
-            operationDisplay.setText("Operations Used:" + operationCounter);
+            operationDisplay.setText("Operations Used:" + operationCounter + " / 4");
             checkFinished();
 
         }
@@ -428,9 +430,38 @@ public class MainActivity extends AppCompatActivity {
 
         else if(operationCounter > 4)
         {
-            Intent reset = new Intent(MainActivity.this, MainActivity.class);
-            startActivity(reset);
+            openDialog();
         }
+    }
+
+    private void openDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Out of Operations!")
+                .setMessage("You failed to achieve the target number...")
+                .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent exit = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(exit);
+                    }
+                })
+                .setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        userInput.setText("");
+                        num1 = 0;
+                        num2 = 0;
+                        operationCounter = 0;
+                        operationDisplay.setText("Operations Used: 0 / 4");
+                        operation = 4;
+                        numClicked1 = false;
+                        numClicked2 = false;
+                        operationClicked = false;
+                        enableButtons();
+                    }
+                });
+        builder.create().show();
+
     }
 
     private int calculate(int num1, int num2, int operation) {
